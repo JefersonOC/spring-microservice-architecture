@@ -1,6 +1,8 @@
 package io.github.blackfishlabs.monolithic;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,21 +12,14 @@ import java.util.Date;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
-@ToString
-public class Student {
+public class Subject {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
-
-    @NonNull
-    private String name;
-    private Integer registration;
-    private String email;
-
-    Date birth;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+    String name;
+    Integer workload;
+    Date start;
 }
